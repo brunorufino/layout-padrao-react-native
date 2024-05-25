@@ -1,7 +1,7 @@
 Instruções
 
 Clone o repositório:
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/layout-padrao-react-native.git
 
 Navegue até o diretório do projeto:
 cd layout-padrao-react-native
