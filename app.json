@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "meuPrimeiroProjetoMobile",
+    "displayName": "Meu Primeiro Projeto Mobile",
     "slug": "meuPrimeiroProjetoMobile",
     "version": "1.0.0",
     "orientation": "portrait",
