@@ -17,7 +17,6 @@ Tecnologias utilizadas:
 React Native
 Expo
 
-Contribuição
 Contribuições são bem-vindas! Para sugestões, correções de bugs ou adições de novos recursos, por favor, abra uma issue.
 
 
