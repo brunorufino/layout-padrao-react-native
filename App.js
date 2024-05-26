@@ -5,6 +5,7 @@ import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import DashboardScreen from './screens/DashboardScreen';
 import ClientRegisterScreen from './screens/ClientRegisterScreen';
+import ChatListScreen from './screens/ChatListScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -16,6 +17,7 @@ export default function App() {
         <Drawer.Screen name="Register" component={RegisterScreen} />
         <Drawer.Screen name="Dashboard" component={DashboardScreen} />
         <Drawer.Screen name="ClientRegister" component={ClientRegisterScreen} />
+        <Drawer.Screen name="ChatList" component={ChatListScreen} options={{ drawerLabel: 'Conversas' }} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
