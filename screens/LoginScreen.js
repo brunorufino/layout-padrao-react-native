@@ -50,9 +50,13 @@ const LoginScreen = ({ navigation }) => {
         editable={!loading} // Desabilitar o campo durante o carregamento
       />
       {loading ? (
-        <ActivityIndicator size="large" color="#0000ff" />
+        <View style={styles.activityIndicatorContainer}>
+          <ActivityIndicator size="large" color="#1877f2" />
+        </View>
       ) : (
-        <Button title="Login" onPress={handleLogin} />
+        <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
+          <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
       )}
       <TouchableOpacity onPress={() => navigation.navigate('Register')} disabled={loading}>
         <Text style={styles.link}>Não tem uma conta? Registre-se</Text>
@@ -66,29 +70,48 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     padding: 20,
+    backgroundColor: '#ffffff',
   },
   title: {
-    fontSize: 24,
+    fontSize: 28,
+    marginBottom: 20,
+    textAlign: 'center',
+    color: '#333333',
+  },
+  input: {
+    height: 50,
+    borderColor: '#cccccc',
+    borderWidth: 1,
+    marginBottom: 20,
+    padding: 15,
+    borderRadius: 25,
+    fontSize: 16,
+    color: '#333333',
+  },
+  error: {
+    color: '#ff0000',
     marginBottom: 20,
     textAlign: 'center',
   },
-  input: {
-    height: 40,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    marginBottom: 10,
-    padding: 10,
-    borderRadius: 5,
+  loginButton: {
+    backgroundColor: '#1877f2',
+    padding: 15,
+    borderRadius: 25,
   },
-  error: {
-    color: 'red',
-    marginBottom: 10,
+  buttonText: {
+    color: '#ffffff',
+    fontSize: 18,
     textAlign: 'center',
   },
   link: {
-    marginTop: 10,
-    color: 'blue',
+    marginTop: 20,
+    color: '#1877f2',
     textAlign: 'center',
+    fontSize: 16,
+  },
+  activityIndicatorContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 

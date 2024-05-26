@@ -50,8 +50,8 @@ const DashboardScreen = ({ navigation }) => {
         <TextInput
           style={[
             styles.input,
-            Platform.OS === 'ios' && { marginBottom: 25 }, // Adicionando espaço extra no final do TextInput no iOS
-            Platform.OS === 'android' && { marginBottom: 20 }, // Adicionando espaço extra no final do TextInput no Android
+            Platform.OS === 'ios' && { marginBottom: 20 }, // Ajustando a margem inferior do TextInput no iOS
+            Platform.OS === 'android' && { marginBottom: 10 }, // Ajustando a margem inferior do TextInput no Android
           ]}
           value={newPost}
           onChangeText={setNewPost}
@@ -126,6 +126,7 @@ const styles = StyleSheet.create({
     padding: 10,
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom: 20, // Ajustando a margem inferior do ícone de envio
   },
 });
 
